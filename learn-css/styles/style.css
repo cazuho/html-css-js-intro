@@ -1,4 +1,69 @@
+/* すべての要素にスタイルを適用 */
+* {
+    box-sizing: border-box;
+}
 
-p {
-    color: red;
+body {
+    background-color: #78C8D5;
+}
+
+/* ブラウザーのビューポートが 30em よりも広い場合の色 */
+@media (min-width: 30em) {
+    body {
+        background-color: #EFF1F3;
+    }
+}
+
+h1,
+h2,
+.intro {
+    font-size: 2em;
+    color: #221E22;
+}
+
+/* 未訪問のリンク */
+a:link {
+    color: rgb(120, 200, 213);
+    /* リンクの下線を消す */
+    text-decoration: none;
+}
+
+/* classがmanythingsの要素 */
+.manythings {
+    width: 80%;
+    background-color: #ECA72C;
+    border: 1px solid #221E22;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+/* idがonethingの要素 */
+#onething {
+    font-size: 2.5em;
+    /* 色のグラデーション */
+    background-image: linear-gradient(to right, #EE5622, #ECA72C);
+    color: #EFF1F3;
+    padding: 10px;
+    text-align: center;
+}
+
+.box {
+    border: 2px solid #221E22;
+    padding: 15px;
+    background-color: #EFF1F3;
+    transform: scale(1.02);
+}
+
+/* classがboxの要素の子孫のp要素 */
+.box p {
+    color: hsl(15, 86%, 53%);
+    font-size: 1.2em;
+}
+
+/* boxクラスを持つ要素の子孫のp要素の最初の子要素 */
+.box p:first-child {
+    /* HSL（色相、彩度、明度） */
+    color: hsl(188, 100%, 36%);
+    font-weight: bold;
+    /* フォント太字 */
 }
